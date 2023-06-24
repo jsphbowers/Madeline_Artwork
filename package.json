@@ -1,0 +1,16 @@
+
+  {
+    "name": "madeline_artwork",
+    "version": "1.0.0",
+    "scripts": {
+      "build": "npm run setup:server",
+      "setup:app": "npm run setup:server && npm run setup:client",
+      "setup:client": "cd Madeline_Artwork.client && npm i",
+      "setup:server": "cd Madeline_Artwork && npm i",
+      "start": "node Madeline_Artwork/index.js"
+    },
+    "engines": {
+      "node": "^18.12.1"
+    }
+  }
+  
