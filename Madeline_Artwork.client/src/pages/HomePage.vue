@@ -1,7 +1,7 @@
 <template>
   <div class="container-fluid">
     <section class="row justify-content-center">
-      <div class="masonry-with-columns col-10 mt-3">
+      <div class="masonry-with-columns col-10">
         <img v-for="image in images" :key="image" class="art-img" :src="image" />
       </div>
     </section>
