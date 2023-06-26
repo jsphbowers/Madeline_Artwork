@@ -5,7 +5,7 @@
         <img src="../assets/img/temp-logo.png" alt="a line drawing of mushrooms" class="hero-img">
         <h1 class="cursive">New Earth Designs</h1>
       </div>
-      <div class="col-7 d-flex justify-content-between">
+      <div class="col-7 d-flex justify-content-between mt-3">
         <router-link :to="{ name: 'Home' }" class="text-dark"
           :class="{ underline: route.name == 'Home' }">Home</router-link>
         <router-link :to="{ name: 'About' }" class="text-dark"
@@ -47,4 +47,5 @@ export default {
 
 .underline {
   border-bottom: 2px solid olive
-}</style>
+}
+</style>
