@@ -1,8 +1,10 @@
 <template>
   <div class="container-fluid">
-    <div class="col-12 d-flex justify-content-center">
-      <img src="../assets/img/temp-logo.png" alt="a line drawing of mushrooms" class="hero-img">
-    </div>
+    <section class="row">
+      <div class="col-12 d-flex justify-content-center">
+        <img src="../assets/img/temp-logo.png" alt="a line drawing of mushrooms" class="hero-img">
+      </div>
+    </section>
   </div>
 </template>
 
