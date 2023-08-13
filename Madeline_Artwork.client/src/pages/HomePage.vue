@@ -1,10 +1,22 @@
 <template>
   <div class="container-fluid">
     <section class="row justify-content-center">
-      <div class="masonry-with-columns col-10">
-        <img v-for="image in images" :key="image" class="art-img" :src="image" />
+      <div class="col-10">
+        <h1 class="text-center">Portfolio</h1>
+        <div class="masonry-with-columns">
+          <img v-for="image in portfolio_images" :key="image" class="art-img" :src="image" />
+        </div>
+        <!-- <img class="art-img" src="src\assets\img\Art Work\Live Photos\Portfolio\Cat_Butterfly.jpeg" /> -->
+      </div>
+      <div class="col-10">
+        <h1 class="text-center">Client Work</h1>
+        <div class="masonry-with-columns">
+          <img v-for="image in client_images" :key="image" class="art-img selectable" data-toggle="modal"
+            data-target="#exampleModal" :src="image" />
+        </div>
       </div>
     </section>
+
   </div>
 </template>
 
@@ -12,7 +24,10 @@
 export default {
   setup() {
     return {
-      images: ["https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1345&q=80", "https://images.unsplash.com/photo-1541367777708-7905fe3296c0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2695&q=80", "https://images.unsplash.com/photo-1549490349-8643362247b5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80", "https://images.unsplash.com/photo-1482160549825-59d1b23cb208?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2369&q=80", "https://images.unsplash.com/photo-1570393080660-de4e4a15a247?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2274&q=80", "https://images.unsplash.com/photo-1547826039-bfc35e0f1ea8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2272&q=80", "https://images.unsplash.com/photo-1561214115-f2f134cc4912?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1309&q=80", "https://images.unsplash.com/photo-1549277513-f1b32fe1f8f5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2370&q=80"]
+
+      portfolio_images: ["src/assets/img/Art Work/Live Photos/Portfolio/Cat_Butterfly.jpeg", "/src/assets/img/Art Work/Live Photos/Portfolio/cougar.jpeg", "src/assets/img/Art Work/Live Photos/Portfolio/Face_W_Snake.jpeg", "/src/assets/img/Art Work/Live Photos/Portfolio/Skull_cocktail2.jpg", "src/assets/img/Art Work/Live Photos/Portfolio/Skull_Cropped.jpg", "/src/assets/img/Art Work/Live Photos/Portfolio/SnakeSkulls.jpg", "src/assets/img/Art Work/Live Photos/Portfolio/Wolf_half.jpg"],
+
+      client_images: ["src/assets/img/Art Work/Live Photos/Client Work/Geometric.png", "src/assets/img/Art Work/Live Photos/Client Work/Half_Face_Letterboxed.png", "src/assets/img/Art Work/Live Photos/Client Work/Horse_W_Tree.png", "src/assets/img/Art Work/Live Photos/Client Work/Lion_LetterBoxed.png", "src/assets/img/Art Work/Live Photos/Client Work/Native_American_Letterboxed.png", "src/assets/img/Art Work/Live Photos/Client Work/Woman_by_Lake.jpeg"]
     }
   }
 }
@@ -20,7 +35,7 @@ export default {
 
 <style scoped lang="scss">
 .masonry-with-columns {
-  columns: 2 200px;
+  columns: 3 200px;
   column-gap: 2rem;
   padding-left: 3em;
   padding-right: 3em;

@@ -2,8 +2,9 @@
   <div class="container-fluid">
     <section class="row justify-content-center">
       <div class="col-10 d-flex flex-column align-items-center">
-        <img src="../assets/img/temp-logo.png" alt="a line drawing of mushrooms" class="hero-img">
+        <img src="src\assets\img\Logo.png" alt="a line drawing of mushrooms" class="hero-img">
         <h1 class="cursive">New Earth Designs</h1>
+        <h3 class="cursive">Hand Drawn Original Artwork</h3>
       </div>
       <div class="col-7 d-flex justify-content-between my-3">
         <router-link :to="{ name: 'Home' }" class="text-dark"
